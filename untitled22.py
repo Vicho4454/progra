@@ -13,7 +13,7 @@ import random
 
 def gen():
     return random.randint(10, 99)
-st.title('Mi primerra aplicación de Streamlit',key = gen())
+st.title('Mi primerra aplicación de Streamlit')
 st.header('!Hola, Streamlit!',key = gen())
 st.write('Esto es una aplicación simple',key = gen())
 st.image('logo.png',key = gen())
