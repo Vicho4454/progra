@@ -14,10 +14,10 @@ def cargar_datos(archivo):
 
 
 
-#st.title('Mi primerra aplicación de Streamlit')
-st.title('El gonza es entero Cola')
-#st.header('!Hola, Streamlit!')
-#st.write('Esto es una aplicación simple')
+st.title('Mi primerra aplicación de Streamlit')
+
+st.header('!Hola, Streamlit!')
+st.write('Esto es una aplicación simple')
 st.image('logo.png')
 if st.button('Presiona Aqui',key = 1):
     main = cargar_datos(archivo)
