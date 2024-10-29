@@ -17,7 +17,7 @@ st.title('Mi primerra aplicación de Streamlit')
 st.header('!Hola, Streamlit!')
 st.write('Esto es una aplicación simple')
 st.image('logo.png')
-if st.button('Presiona Aqui',key = gen()):
+if st.button('Presiona Aqui',key = '2'):
     st.write('Has presionado el botón')
 
 input1 = st.text_input('Escribe algo',key = '3')
@@ -28,7 +28,7 @@ st.sidebar.header('!Hola, Barra Lateral!')
 st.sidebar.write('Esto es una barra lateral')
 st.sidebar.image('logo.png')
 
-if st.sidebar.button('Presiona Aqui',key = gen()):
+if st.sidebar.button('Presiona Aqui',key = '1'):
     st.sidebar.write('Has presionado el botón')
 
 input2 = st.sidebar.text_input('Escribe algo',key = '4')
