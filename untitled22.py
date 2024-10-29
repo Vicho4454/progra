@@ -8,23 +8,28 @@ Original file is located at
 """
 
 import streamlit as st
-st.title('Mi primerra aplicación de Streamlit')
-st.header('!Hola, Streamlit!')
-st.write('Esto es una aplicación simple', key = '1')
-st.image('logo.png')
-if st.button('Presiona Aqui',key = '2'):
-    st.write('Has presionado el botón')
 
-input = st.text_input('Escribe algo', key= '3')
-st.write('Escribiste:', input)
+import random
 
-st.sidebar.title('Mi Primera barra lateral de Streamlit')
-st.sidebar.header('!Hola, Barra Lateral!')
-st.sidebar.write('Esto es una barra lateral',key = '4')
+def gen():
+    return random.randint(10, 99)
+st.title('Mi primerra aplicación de Streamlit',key = gen())
+st.header('!Hola, Streamlit!',key = gen())
+st.write('Esto es una aplicación simple',,key = gen())
+st.image('logo.png',key = gen())
+if st.button('Presiona Aqui',key = gen()):
+    st.write('Has presionado el botón',key = gen())
+
+input = st.text_input('Escribe algo',key = gen())
+st.write('Escribiste:', input,key = gen())
+
+st.sidebar.title('Mi Primera barra lateral de Streamlit',key = gen())
+st.sidebar.header('!Hola, Barra Lateral!',key = gen())
+st.sidebar.write('Esto es una barra lateral',key = gen())
 st.sidebar.image('logo.png')
 
-if st.sidebar.button('Presiona Aqui',key = '5'):
-    st.sidebar.write('Has presionado el botón')
+if st.sidebar.button('Presiona Aqui',key = gen()):
+    st.sidebar.write('Has presionado el botón',key = gen())
 
-input = st.sidebar.text_input('Escribe algo',key = '6')
-st.sidebar.write('Escribiste:', input)
+input = st.sidebar.text_input('Escribe algo',key = gen())
+st.sidebar.write('Escribiste:', input,key = gen())
