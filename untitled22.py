@@ -29,14 +29,19 @@ st.sidebar.header('!Hola, Barra Lateral!')
 st.sidebar.write('Esto es una barra lateral')
 st.sidebar.image('logo.png')
 
+#if st.sidebar.button('Presiona Aqui',key = 4):
+    #st.sidebar.write('Has presionado el botón')
 if st.sidebar.button('Presiona Aqui',key = 4):
-    st.sidebar.write('Has presionado el botón')
+    main = cargar_datos(archivo)
+    msg_counts = main.groupby('TIPO')['MSG'].count()
+    st.bar_chart(msg_counts,x_label = 'Tipos de mensaje', y_label = 'Cantidad')
+    
 
 input = st.sidebar.text_input('Escribe algo',key = 3)
 st.sidebar.write('Escribiste:', input)
 
 
 
-main = cargar_datos(archivo)
-msg_counts = main.groupby('TIPO')['MSG'].count()
-st.bar_chart(msg_counts,x_label = 'Tipos de mensaje', y_label = 'Cantidad')
+#main = cargar_datos(archivo)
+#msg_counts = main.groupby('TIPO')['MSG'].count()
+#st.bar_chart(msg_counts,x_label = 'Tipos de mensaje', y_label = 'Cantidad')
