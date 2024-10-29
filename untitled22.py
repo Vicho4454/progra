@@ -29,7 +29,7 @@ st.sidebar.header('!Hola, Barra Lateral!')
 st.sidebar.write('Esto es una barra lateral')
 st.sidebar.image('logo.png')
 
-if st.sidebar.button('Presiona Aqui'),key = 4:
+if st.sidebar.button('Presiona Aqui',key = 4):
     st.sidebar.write('Has presionado el botón')
 
 input = st.sidebar.text_input('Escribe algo',key = 3)
