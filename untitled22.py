@@ -15,21 +15,21 @@ def gen():
     return random.randint(10, 99)
 st.title('Mi primerra aplicación de Streamlit')
 st.header('!Hola, Streamlit!',key = gen())
-st.write('Esto es una aplicación simple',key = gen())
+st.write('Esto es una aplicación simple')
 st.image('logo.png',key = gen())
 if st.button('Presiona Aqui',key = gen()):
-    st.write('Has presionado el botón',key = gen())
+    st.write('Has presionado el botón')
 
 input = st.text_input('Escribe algo',key = gen())
-st.write('Escribiste:', input,key = gen())
+st.write('Escribiste:', input)
 
-st.sidebar.title('Mi Primera barra lateral de Streamlit',key = gen())
-st.sidebar.header('!Hola, Barra Lateral!',key = gen())
-st.sidebar.write('Esto es una barra lateral',key = gen())
-st.sidebar.image('logo.png')
+st.sidebar.title('Mi Primera barra lateral de Streamlit')
+st.sidebar.header('!Hola, Barra Lateral!')
+st.sidebar.write('Esto es una barra lateral')
+st.sidebar.image('logo.png',key = gen())
 
 if st.sidebar.button('Presiona Aqui',key = gen()):
-    st.sidebar.write('Has presionado el botón',key = gen())
+    st.sidebar.write('Has presionado el botón')
 
 input = st.sidebar.text_input('Escribe algo',key = gen())
-st.sidebar.write('Escribiste:', input,key = gen())
+st.sidebar.write('Escribiste:', input)
