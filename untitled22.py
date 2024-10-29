@@ -16,17 +16,17 @@ def gen():
 st.title('Mi primerra aplicación de Streamlit')
 st.header('!Hola, Streamlit!')
 st.write('Esto es una aplicación simple')
-st.image('logo.png',key = gen())
+st.image('logo.png')
 if st.button('Presiona Aqui',key = gen()):
     st.write('Has presionado el botón')
 
-input = st.text_input('Escribe algo',key = gen())
+input = st.text_input('Escribe algo')
 st.write('Escribiste:', input)
 
 st.sidebar.title('Mi Primera barra lateral de Streamlit')
 st.sidebar.header('!Hola, Barra Lateral!')
 st.sidebar.write('Esto es una barra lateral')
-st.sidebar.image('logo.png',key = gen())
+#st.sidebar.image('logo.png',key = gen())
 
 if st.sidebar.button('Presiona Aqui',key = gen()):
     st.sidebar.write('Has presionado el botón')
