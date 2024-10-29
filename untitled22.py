@@ -15,7 +15,7 @@ def gen():
     return random.randint(10, 99)
 st.title('Mi primerra aplicación de Streamlit',key = gen())
 st.header('!Hola, Streamlit!',key = gen())
-st.write('Esto es una aplicación simple',,key = gen())
+st.write('Esto es una aplicación simple',key = gen())
 st.image('logo.png',key = gen())
 if st.button('Presiona Aqui',key = gen()):
     st.write('Has presionado el botón',key = gen())
