@@ -20,7 +20,7 @@ st.image('logo.png')
 if st.button('Presiona Aqui',key = gen()):
     st.write('Has presionado el botón')
 
-input1 = st.text_input('Escribe algo',key = gen())
+input1 = st.text_input('Escribe algo',key = '3')
 st.write('Escribiste:', input1)
 
 st.sidebar.title('Mi Primera barra lateral de Streamlit')
@@ -31,5 +31,5 @@ st.sidebar.image('logo.png')
 if st.sidebar.button('Presiona Aqui',key = gen()):
     st.sidebar.write('Has presionado el botón')
 
-input2 = st.sidebar.text_input('Escribe algo',key = gen())
+input2 = st.sidebar.text_input('Escribe algo',key = '4')
 st.sidebar.write('Escribiste:', input2)
