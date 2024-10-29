@@ -14,7 +14,7 @@ def cargar_datos(archivo):
 
 
 
-st.title('Mi primerra aplicación de Streamlit')
+#st.title('Mi primerra aplicación de Streamlit')
 st.title('El gonza es entero Cola')
 #st.header('!Hola, Streamlit!')
 #st.write('Esto es una aplicación simple')
