@@ -31,5 +31,5 @@ st.sidebar.image('logo.png')
 if st.sidebar.button('Presiona Aqui',key = gen()):
     st.sidebar.write('Has presionado el botón')
 
-input = st.sidebar.text_input('Escribe algo',key = gen())
+input = st.sidebar.text_input('Escribe algo')
 st.sidebar.write('Escribiste:', input)
