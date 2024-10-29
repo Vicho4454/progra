@@ -26,7 +26,7 @@ st.write('Escribiste:', input)
 st.sidebar.title('Mi Primera barra lateral de Streamlit')
 st.sidebar.header('!Hola, Barra Lateral!')
 st.sidebar.write('Esto es una barra lateral')
-#st.sidebar.image('logo.png',key = gen())
+st.sidebar.image('logo.png')
 
 if st.sidebar.button('Presiona Aqui',key = gen()):
     st.sidebar.write('Has presionado el botón')
