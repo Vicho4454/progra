@@ -39,4 +39,4 @@ st.sidebar.write('Escribiste:', input)
 
 main = cargar_datos(archivo)
 msg_counts = main.groupby('TIPO')['MSG'].count()
-st.bar_charts(msg_counts.index, msg_counts.values,x_label = 'Tipos de mensaje', y_label = 'Cantidad')
+st.bar_chart(msg_counts.index, msg_counts.values,x_label = 'Tipos de mensaje', y_label = 'Cantidad')
