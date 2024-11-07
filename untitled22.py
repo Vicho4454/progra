@@ -16,7 +16,7 @@ def cargar_datos(archivo):
 
 st.title('Mi primera aplicación de Streamlit')
 
-st.header('!Hola, Streamlit!')
+st.header('!Hola, Bienvenido!')
 st.write('Esto es una aplicación simple')
 st.image('logo.png')
 color1 = st.color_picker('Seleccione el Color del Grafico')
@@ -30,9 +30,9 @@ input = st.text_input('Escribe algo ',key = 2)
 if input:   
     st.write('Escribiste', input)
 
-st.sidebar.title('Mi Primera barra lateral de Streamlit')
-st.sidebar.header('!Hola, Barra Lateral!')
-st.sidebar.write('Esto es una barra lateral')
+
+st.sidebar.header('!Hola, Te Presento la Barra lateral!')
+
 st.sidebar.image('logo.png')
 
 if st.sidebar.button('Presiona Aqui',key = 4):
