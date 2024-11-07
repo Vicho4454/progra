@@ -88,7 +88,7 @@ def graficar_trayectoria(t):
 st.title("Visualización de la trayectoria de T y P y distancia d(t) entre P y S")
 
 # Slider para el parámetro t en la trayectoria de T y P
-t = st.slider("Valor de t (días)", min_value=0, max_value=365, step=1, value=0)
+t = st.sidebar.slider("Valor de t (días)", min_value=0, max_value=365, step=1, value=0)
 
 # Graficar la trayectoria
 graficar_trayectoria(t)
