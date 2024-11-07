@@ -26,8 +26,9 @@ if st.button('Presiona Aqui',key = 1):
     color1 = st.color_picker('Seleccione el Color del Grafico')
     st.bar_chart(msg_counts,x_label = 'Tipos de mensaje', y_label = 'Cantidad',color = color1)
 
-input = st.text_input('Escribe algo',key = 2)
-st.write('Escribiste:', input)
+input = st.text_input('Escribe tu Nombre',key = 2)
+if input:   
+    st.write('Hola', input)
 
 st.sidebar.title('Mi Primera barra lateral de Streamlit')
 st.sidebar.header('!Hola, Barra Lateral!')
