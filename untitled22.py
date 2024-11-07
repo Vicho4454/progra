@@ -86,7 +86,8 @@ def graficar_trayectoria(t):
 
 # Interfaz de Streamlit
 st.title("Visualización de la trayectoria de T y P y distancia d(t) entre P y S")
-
+input = st.text_input('Escribe tu nombre',key = 2)
+st.write('Hola', input,', y Bienvenid@)
 # Slider para el parámetro t en la trayectoria de T y P
 st.sidebar.header('Valor modificable de t en el intervalo [0,365]')
 t = st.sidebar.slider("Valor de t (días)", min_value=0, max_value=365, step=1, value=0)
