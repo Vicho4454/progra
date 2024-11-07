@@ -19,7 +19,7 @@ st.title('Mi primerra aplicación de Streamlit')
 st.header('!Hola, Streamlit!')
 st.write('Esto es una aplicación simple')
 st.image('logo.png')
-color1 = st.color_picker('Seleccione el Color del Grafico')
+color1 = st.sidebar.color_picker('Seleccione el Color del Grafico')
 if st.button('Presiona Aqui',key = 1):
     main = cargar_datos(archivo)
     msg_counts = main.groupby('TIPO')['MSG'].count()
