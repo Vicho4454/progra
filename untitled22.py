@@ -98,56 +98,57 @@ graficar_trayectoria(t)
 distancia_actual = distancia(t)
 st.metric(label="Distancia d(t) entre P y S", value=f"{distancia_actual:.2f} unidades")
 #########################################################
-
-t = sp.symbols('t')
+button = sp.button('Presione aqui para ver la funcion de la distancia entre P y S')
+if button:
+    t = sp.symbols('t')
 
 # Definimos las funciones de las coordenadas de T
-x_t = 2000 * sp.cos((2 * sp.pi * t / 365) + (sp.pi / 2))
-y_t = 1200 * sp.sin((2 * sp.pi * t / 365) + (sp.pi / 2))
+    x_t = 2000 * sp.cos((2 * sp.pi * t / 365) + (sp.pi / 2))
+    y_t = 1200 * sp.sin((2 * sp.pi * t / 365) + (sp.pi / 2))
 
 # Definimos las coordenadas de P
-p_x = x_t + sp.cos(2 * sp.pi * t)
-p_y = y_t + sp.sin(2 * sp.pi * t)
+    p_x = x_t + sp.cos(2 * sp.pi * t)
+    p_y = y_t + sp.sin(2 * sp.pi * t)
 
 # Coordenadas de S
-S_x, S_y = -1600, 0
+    S_x, S_y = -1600, 0
 
 
 # Vector de tiempo para el gráfico de distancia
-d_t = d_t = sp.sqrt((p_x - S_x)**2 + (p_y - S_y)**2)
-d_t_func = sp.lambdify(t, d_t, 'numpy')
-t_vals = np.linspace(0, 365, 1000)
-d_vals = d_t_func(t_vals)
+    d_t = d_t = sp.sqrt((p_x - S_x)**2 + (p_y - S_y)**2)
+    d_t_func = sp.lambdify(t, d_t, 'numpy')
+    t_vals = np.linspace(0, 365, 1000)
+    d_vals = d_t_func(t_vals)
 
 # Graficamos la función de distancia
-plt.figure(figsize=(10, 6))
-plt.plot(t_vals, d_vals, label='Distancia d(t)', color='blue')
-plt.title('Función de distancia d(t) entre P y S', fontsize=16)
-plt.xlabel('Tiempo t (días)', fontsize=14)
-plt.ylabel('Distancia d(t)', fontsize=14)
-plt.grid(True)
+    plt.figure(figsize=(10, 6))
+    plt.plot(t_vals, d_vals, label='Distancia d(t)', color='blue')
+    plt.title('Función de distancia d(t) entre P y S', fontsize=16)
+    plt.xlabel('Tiempo t (días)', fontsize=14)
+    plt.ylabel('Distancia d(t)', fontsize=14)
+    plt.grid(True)
 
 # Encontramos los puntos de mínimo y máximo
-t_vals = np.linspace(0, 365, 1000)
-d_vals = d_t_func(t_vals)
+    t_vals = np.linspace(0, 365, 1000)
+    d_vals = d_t_func(t_vals)
 
 # Resultados de mínimo y máximo
-t_min = t_vals[np.argmin(d_vals)]
-d_min = np.min(d_vals)
-t_max = t_vals[np.argmax(d_vals)]
-d_max = np.max(d_vals)  # Tomamos el valor negativo porque optimizamos la función -d(t)
+    t_min = t_vals[np.argmin(d_vals)]
+    d_min = np.min(d_vals)
+    t_max = t_vals[np.argmax(d_vals)]
+    d_max = np.max(d_vals)  # Tomamos el valor negativo porque optimizamos la función -d(t)
 
 # Marcamos los puntos mínimo y máximo en la gráfica
-plt.scatter([t_min], [d_min], color='red', label=f'Mínimo en t={t_min:.2f}, d={d_min:.2f}')
-plt.scatter([t_max], [d_max], color='green', label=f'Máximo en t={t_max:.2f}, d={d_max:.2f}')
+    plt.scatter([t_min], [d_min], color='red', label=f'Mínimo en t={t_min:.2f}, d={d_min:.2f}')
+    plt.scatter([t_max], [d_max], color='green', label=f'Máximo en t={t_max:.2f}, d={d_max:.2f}')
 
-plt.legend()
-st.pyplot(plt.gcf())
-plt.clf()
+    plt.legend()
+    st.pyplot(plt.gcf())
+    plt.clf()
 
 # Imprimimos los resultados numéricos
-st.write(f"Distancia mínima en t = {t_min:.2f} días, d = {d_min:.2f}")
-st.write(f"Distancia máxima en t = {t_max:.2f} días, d = {d_max:.2f}")
+    st.write(f"Distancia mínima en t = {t_min:.2f} días, d = {d_min:.2f}")
+    st.write(f"Distancia máxima en t = {t_max:.2f} días, d = {d_max:.2f}")
 logo_uss = 'logo.png'
 st.logo(
     logo_uss,
