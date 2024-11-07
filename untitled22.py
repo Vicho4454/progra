@@ -41,7 +41,7 @@ if st.sidebar.button('Presiona Aqui',key = 4):
 
 input2 = st.sidebar.text_input('Escribe Tu Nombre',key = 3)
 if input2:
-    st.sidebar.write('Hola', input)
+    st.sidebar.write('Hola', input2)
 
 
 
