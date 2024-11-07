@@ -99,7 +99,7 @@ distancia_actual = distancia(t)
 st.metric(label="Distancia d(t) entre P y S", value=f"{distancia_actual:.2f} unidades")
 #########################################################
 
-if sp.button('Presione aqui para ver la funcion de la distancia entre P y S'):
+if st.button('Presione aqui para ver la funcion de la distancia entre P y S'):
     t = sp.symbols('t')
 
 # Definimos las funciones de las coordenadas de T
