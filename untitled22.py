@@ -98,8 +98,8 @@ graficar_trayectoria(t)
 distancia_actual = distancia(t)
 st.metric(label="Distancia d(t) entre P y S", value=f"{distancia_actual:.2f} unidades")
 #########################################################
-button = sp.button('Presione aqui para ver la funcion de la distancia entre P y S')
-if button:
+
+if sp.button('Presione aqui para ver la funcion de la distancia entre P y S'):
     t = sp.symbols('t')
 
 # Definimos las funciones de las coordenadas de T
